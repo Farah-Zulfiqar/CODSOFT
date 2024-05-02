@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"Poppins", sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-position: center;
+    background-size: cover;
+}
+.header-class{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 190px;
+    padding-top: -10px;
+}
+nav ul li{
+    display: inline-block; /* so it will be horizontally aligned*/
+    list-style: none;
+    margin: 10px 20px; /* 10px (top & bottom), 20px (left & right)*/
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a::after{
+    content: ' ';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+nav ul li a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+.text-header{
+    margin-top: 13%;
+    font-size: 30px;
+}
+.text-header h1{
+    margin-top: 20px;
+    font-size: 50px;
+}
+.text-header h1 span{
+    color: #ff004f;
+}
+
+/*About*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.about-class{
+    padding: 10px 10%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.col-1{
+    flex-basis: 35%; /* width of the column will be 35%*/
+}
+.col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.col-2{
+    flex-basis: 60%;
+}
+.sub{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tabs-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    width: 0;
+    content: ' ';
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-skills{
+    display: block;
+}
+
+/*Services*/
+.services-class{
+    padding: 10px 10%;
+}
+#Services{
+    padding: 30px 0;
+}
+.list-services{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.list-services div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.list-services div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.list-services div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.list-services div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    border: #080808;
+    border-radius: 5px;
+    background-color: #080808;
+    padding: 10px;
+}
+.list-services div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/*Portfolio*/
+.portfolio-class{
+    padding: 10px 10%;
+}
+#portfolio{
+    padding: 50px 0;
+}
+.list-work{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.my-work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.my-work:hover img{
+    transform: scale(1.1);
+}
+.my-work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.my-work:hover .layer{
+    height: 100%;
+}
+.button{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 2px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.5s;
+    color: #fff;
+    font-size: 20px;
+}
+.button:hover{
+    background: #ff004f;
+}
+
+/*Contact*/
+.contact-class{
+    padding: 10px 10%;
+}
+.left-c{
+    flex-basis: 35%;
+}
+.right-c{
+    flex-basis: 60%;
+}
+.left-c p{
+    margin-top: 30px;
+}
+.left-c p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.icons{
+    margin-top: 30px;
+}
+.icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.button.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.right-c form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ff004f;
+}
